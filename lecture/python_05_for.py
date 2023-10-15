@@ -11,15 +11,16 @@
 # 반복횟수 O => for
 # 반복횟수 X => while
 
-# for문
+# *for문 기본문법
 #  for i in [1, 2, 3]:
 #    print(i)
 #
-# default: 시작(0), 증감(+1)
-# range(시작, 끝, 증감)
-# range(3)        => 0, 1, 2
-# range(1, 10)    => 1, 2, 3, 4, 5, 6, 7, 8, 9
-# range(2, 5, 2)  => 2, 4
+# *range() 함수
+#  - default: 시작(0), 증감(+1)
+#  - range(시작, 끝, 증감)
+#  - range(3)         => 0, 1, 2
+#  - range(1, 10)     => 1, 2, 3, 4, 5, 6, 7, 8, 9
+#  - range(2, 5, 2)   => 2, 4
 
 # range()를 활용해서 1~9까지 출력하는 for문
 for i in range(1, 10):
@@ -34,27 +35,15 @@ for alpha in temp:
 #  - 반복횟수(index) 출력하고 싶은 경우!
 #  - enumerate() : 0번 인덱스부터 시작
 for i, alpha in enumerate(temp):
-    print(i, alpha)
+    print(i+1, alpha)
 
-print("=" * 100)
+print("="*100)
 
 # 구구단 2단 출력
 # 2x1=2
 # 2x2=4
 # ...
 # 2x9=18
-
-#
-
-
-print("=" * 100)
-# 2단 9단까지 출력 => 중첩for
-
-
-for i in range(2, 10):
-    for j in range(1, 10):
-        print("{}x{}={}".format(i, j, i * j))
-
 
 # dict를 사용한 for문
 temp = {"A": 1,
@@ -64,23 +53,26 @@ temp = {"A": 1,
 print("="*100)
 # dict => for => Key값 출력
 # keys(), values(), items()
+for element in temp.values():
+    print(element)
+
 for key, value in temp.items():
     print("*****")
-    print(key)
-    print(value)
-
-print("=" * 100)
+    print(key)  # key
+    print(value)  # value
 
 # break, continue
 # break: 즉시 반복문을 빠져 나가세요.
 # continue: 즉시 다음 반복으로 넘어가세요.
 
+# a를 출력하다가 3을 만나면 멈추세요.
 a = [1, 2, 3, 4, 5]
 for i in a:
     if i == 3:
         break
     print(i)
 
+print("="*100)
 # 홀수만 출력
 for i in range(30):
     if i % 2 == 0:
