@@ -15,11 +15,7 @@
 #   - URL: https://sites.google.com/chromium.org/driver/
 #  2.실시간(코드) 다운로드
 
-# TODO: 1분전 -> 계산해서 저장(?시간전 완료)
-#      "조금전"
-
 # 다음 영화 DATE -> 조금전, ?분전, ?시간전, 2023.11.24 11:09
-# TODO: 스케줄러 등록 하루에 1번 수집
 
 from datetime import datetime, timedelta
 import math
